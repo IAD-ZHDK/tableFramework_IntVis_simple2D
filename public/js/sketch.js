@@ -11,7 +11,6 @@
 
 let socket = io() 
 
-let tPS, tPE // testPointStart , testPointEnd of Spike 
 let canvas 
 let trackedDevices = []
 let myFont
@@ -114,11 +113,7 @@ function setup() {
 	document.getElementById('defaultCanvas0').addEventListener('touchend',handleEnd,false)
 	document.getElementById('defaultCanvas0').addEventListener('touchmove',handleMove,false)
 	addScreenPositionFunction(this)
-	tPS = createVector()
-	tPE = createVector()
-
 	listenMessages()
-
 }
 
 function draw() {
@@ -182,11 +177,6 @@ function show2d() {
 			}
 		})
 	}
-}
-
-
-function mouseClicked() {
-
 }
 
 
